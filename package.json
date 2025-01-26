@@ -1,0 +1,46 @@
+{
+  "name": "google.chat.port.to.pc",
+  "productName": "Google Chat",
+  "author": {
+    "name": "Cheru",
+    "email": "cherubini.franco@hotmail.com"
+  },
+  "description": "Port of google chat into a executable",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.google.chat.fvv",
+    "artifactName": "GoogleChat-Setup-${version}.${ext}",
+    "files": [
+      "**/*",
+      "build"
+    ],
+    "win": {
+      "icon": "/icon.png",
+      "target": "nsis"
+    },
+    "deb": {}
+  },
+  "homepage": "./",
+  "main": "public/main.js",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}
